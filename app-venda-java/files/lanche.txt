@@ -1,0 +1,4 @@
+648;Hambúrguer;25.92;true;false;Bovino
+764;Cachorro Quente;19.90;false;false;Suino
+915;Batata Frita Super;34.80;true;true;Vegetal
+978;Churros;10;true;true;Doce

@@ -1,0 +1,5 @@
+648;Refrigerante Coca-Cola 350ml;7.90;true;Coca-Cola;Cola;false
+648;Cerveja Heineken 355ml;15.00;true;Heineken;Cevada;true
+247;Mate Leão Natural 300ml;5.90;false;Coca-Cola;Mate;false
+758;Refrigerante Sprite 350ml;7.90;true;Coca-Cola;Limão;false
+846;Refrigerante Pepsi 350ml;7.90;true;Pepsico;Cola;false

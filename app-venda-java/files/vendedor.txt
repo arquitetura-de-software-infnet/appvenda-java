@@ -1,0 +1,4 @@
+Paulo Machado;12345678978;paulomachado.dev@gmail.com
+Rosalia Dias;32165498798;rosalia@gmail.com
+Jose Pacheco;65498732145;pacheco@gmail.com
+Tonico do Sorvete;32178945665;tonico@gmail.com

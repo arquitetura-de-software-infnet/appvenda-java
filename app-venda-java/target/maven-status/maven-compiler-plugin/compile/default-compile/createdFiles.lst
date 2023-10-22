@@ -1,0 +1,9 @@
+br\edu\infnet\appvenda\model\domain\Bebida.class
+br\edu\infnet\appvenda\VendedorLoader.class
+br\edu\infnet\appvenda\model\domain\Produto.class
+br\edu\infnet\appvenda\model\domain\Lanche.class
+br\edu\infnet\appvenda\AppvendaApplication.class
+br\edu\infnet\appvenda\LancheLoader.class
+br\edu\infnet\appvenda\ProdutoLoader.class
+br\edu\infnet\appvenda\BebidaLoader.class
+br\edu\infnet\appvenda\model\domain\Vendedor.class
