@@ -10,6 +10,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import br.edu.infnet.appvenda.model.domain.Lanche;
+import br.edu.infnet.appvenda.model.domain.Vendedor;
 import br.edu.infnet.appvenda.model.service.LancheService;
 
 @Order(3)
@@ -32,6 +33,7 @@ public class LancheLoader implements ApplicationRunner {
 		while(linha != null) {
 			
 			campos = linha.split(";");
+			Vendedor vendedor = new Vendedor();
 			
 			Lanche lanche = new Lanche();
 
@@ -41,6 +43,10 @@ public class LancheLoader implements ApplicationRunner {
 			lanche.setEstoque(Boolean.valueOf(campos[3]));
 			lanche.setVegetariano(Boolean.valueOf(campos[4]));
 			lanche.setTipo(campos[5]);
+			
+			vendedor.setId(Integer.valueOf(campos[6]));
+			
+			lanche.setVendedor(vendedor);
 			
 			lancheService.incluir(lanche);
 			

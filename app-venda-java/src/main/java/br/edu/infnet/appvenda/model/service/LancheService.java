@@ -4,20 +4,23 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appvenda.model.domain.Lanche;
+import br.edu.infnet.appvenda.model.repository.LancheRepository;
 
 @Service
 public class LancheService {
 
-	private Map<Integer, Lanche> mapaLanche = new HashMap<Integer, Lanche>();
+	@Autowired
+	private LancheRepository lancheRepository;
 
 	public void incluir(Lanche lanche) {
-		mapaLanche.put(lanche.getCodigo(), lanche);
+		lancheRepository.save(lanche);
 	}
 	
 	public Collection<Lanche> obterLista(){	
-		return mapaLanche.values();
+		return (Collection<Lanche>) lancheRepository.findAll();
 	}
 }

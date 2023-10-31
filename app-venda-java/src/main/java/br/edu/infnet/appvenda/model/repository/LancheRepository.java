@@ -1,5 +1,11 @@
 package br.edu.infnet.appvenda.model.repository;
 
-public interface LancheRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import br.edu.infnet.appvenda.model.domain.Lanche;
+
+@Repository
+public interface LancheRepository extends CrudRepository<Lanche, Integer>{
 
 }
