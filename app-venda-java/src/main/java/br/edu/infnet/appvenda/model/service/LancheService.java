@@ -23,4 +23,8 @@ public class LancheService {
 	public Collection<Lanche> obterLista(){	
 		return (Collection<Lanche>) lancheRepository.findAll();
 	}
+	
+	public long obterQtde() {
+		return lancheRepository.count();
+	}
 }
