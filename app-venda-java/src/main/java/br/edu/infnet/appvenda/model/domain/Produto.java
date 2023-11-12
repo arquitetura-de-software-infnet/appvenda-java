@@ -7,39 +7,34 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.Table;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "Produto" )
+@Table(name = "TProduto" )
 public class Produto {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private Integer codigo;
 	private String descricao;
-	private Float preco;
-	private Boolean estoque;
-	
+	@PositiveOrZero
+	private int codigo;
+	@Positive
+	private float preco;
+	private boolean estoque;
 	@ManyToOne
 	@JoinColumn(name = "idVendedor")
 	private Vendedor vendedor;
 	
-	public Vendedor getVendedor() {
-		return vendedor;
-	}
-
-	public void setVendedor(Vendedor vendedor) {
-		this.vendedor = vendedor;
-	}
-
 	@Override
 	public String toString() {
-		return String.format("%d - %d - %s - %.2f - %s", 
-				id, codigo , descricao, preco, estoque);
+		return String.format("id (%d) - descricao (%s) - codigo (%d) - preco (%.2f) - estoque (%s) - vendedor [%s]", 
+				id, descricao, codigo, preco, estoque, vendedor);
 	}
 	
 	public Integer getId() {
@@ -73,5 +68,13 @@ public class Produto {
 	}
 	public void setEstoque(Boolean estoque) {
 		this.estoque = estoque;
+	}
+	
+	public Vendedor getVendedor() {
+		return vendedor;
+	}
+
+	public void setVendedor(Vendedor vendedor) {
+		this.vendedor = vendedor;
 	}
 }

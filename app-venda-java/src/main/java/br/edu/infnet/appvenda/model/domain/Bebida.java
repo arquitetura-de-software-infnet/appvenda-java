@@ -13,7 +13,8 @@ public class Bebida extends Produto {
 	
 	@Override
 	public String toString() {
-		return String.format("%s - %s - %s - %s", super.toString(), marca, sabor, alcoolica);
+		return String.format("%s - %s - %s - %s", 
+			super.toString(), marca, sabor, alcoolica);
 	}
 	
 	public String getMarca() {
